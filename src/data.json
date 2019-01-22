@@ -1,0 +1,22 @@
+{
+  "commentInfo": [
+    {
+      "author":  "Sam",
+      "timeAgo": "Today at 4:00PM",
+      "message": "Nice",
+      "avatar":  ""
+    },
+    {
+      "author":  "Alex",
+      "timeAgo": "Today at 6:00PM",
+      "message": "Okay",
+      "avatar":  ""
+    },
+    {
+      "author": "Jane",
+      "timeAgo": "Today at 9:00PM",
+      "message": "Great",
+      "avatar":  ""
+    }
+  ]
+}
