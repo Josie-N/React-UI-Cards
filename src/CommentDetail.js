@@ -3,7 +3,7 @@ import faker from 'faker';
 import commentData from './commentData';
 
 const CommentDetail = props => {
-  const test = commentInfo.map(comment => {
+  const test = commentData.commentInfo.map(comment => {
     return (
       <div>
         <div className="comment">
