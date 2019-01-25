@@ -1,0 +1,20 @@
+{
+0: {
+  "author": "Sam",
+  "timeAgo": "Today at 4:00PM", 
+  "comment": "Looking great!",
+  "avatar": {faker.image.avatar()} 
+  },
+1: {
+  "author": "Alex",
+  "timeAgo": "Today at 6:45PM",
+  "comment": "Looks like it still needs a bit of work.",
+  "avatar": {faker.image.avatar()}
+  },
+2: {
+  "author": "Jane",
+  "timeAgo": "Yesterday at 1:16AM",
+  "comment": "Would recommend.",
+  "avatar": {faker.image.avatar()} 
+  }
+}
