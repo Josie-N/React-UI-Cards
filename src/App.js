@@ -4,7 +4,17 @@ import CommentDetail from './CommentDetail';
 import ApprovalCard from './ApprovalCard';
 import WarningMessage from './WarningMessage';
 
-const App = () => {
+class App extends React.Component {
+  render() {
+  const { commentData } = this.props;
+  const commentDetails = commentData.map(comment => 
+    <ApprovalCard><CommentDetail
+    author={comment.author}
+    timeAgo={comment.timeAgo}
+    comment={comment.message}
+    avatar="https://via.placeholder.com/200"
+    /></ApprovalCard>)
+
   return (
     <div className="ui container comments">
       <ApprovalCard>
@@ -12,32 +22,10 @@ const App = () => {
           message="Super"
         />
       </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail 
-          // author="Sam"
-          // timeAgo="Today at 4:00PM" 
-          // comment="Looking great!"
-          // avatar={faker.image.avatar()} 
-      />
-      </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail 
-          // author="Alex"
-          // timeAgo="Today at 6:45PM" 
-          // comment="Looks like it still needs a bit of work."
-          // avatar={faker.image.avatar()} 
-        />
-      </ApprovalCard>
-      <ApprovalCard>
-        <CommentDetail 
-          // author="Jane"
-          // timeAgo="Yesterday at 1:16AM" 
-          // comment="Would recommend."
-          // avatar={faker.image.avatar()} 
-        />
-      </ApprovalCard>
+      {commentDetails}
     </div>
   );
+  }
 };
 
 export default App;
