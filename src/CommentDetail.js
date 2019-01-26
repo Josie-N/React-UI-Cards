@@ -1,35 +1,26 @@
 import React from 'react';
-import faker from 'faker';
-import commentData from './commentData';
 
-const CommentDetail = props => {
-  const test = commentData.commentInfo.map(comment => {
-    return (
+class CommentDetail extends React.Component {
+  render() {
+    return(
       <div>
         <div className="comment">
           <a href="/" className="avatar">
-            <img alt="avatar" src={props.comment.avatar} />
+          <img alt="avatar" src={this.props.avatar} />
           </a>
         </div>
         <div className="content">
           <a href="/" className="author">
-            {props.comment.author}
+            {this.props.author}
           </a>
           <div className="date-metadata">
-            <span className="date">{props.comment.timeAgo}</span>
+            <span className="date">{this.props.timeAgo}</span>
           </div>
-          <div className="text">{props.comment.message}</div>
+          <div className="text">{this.props.message}</div>
         </div>
       </div>
     )
-  })
-
-
-  return (
-    <div>
-     {test}
-    </div>
-  );
-};
+  }
+}
 
 export default CommentDetail;
